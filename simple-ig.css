@@ -9,10 +9,34 @@ html, body {
     width: 100%;
 }
 .picture-frame{
-    width: 300px;
-    height: 200px;
-    display: inline-block;
+    width: 80%;
+    border: 3px solid greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
 }
 .picture-frame img{
     width: 100%;
+
+}
+/* if absolute position is wanted, should really not do this, use # in html to assign an ID to each picture.
+set where the image is wanted using pixels to position on the screen.
+will not shrink or grow depending on the size of the browser screen. */
+
+/* #one {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+ */
+.puppy-playground{
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    /* how to line up on main axis */
+    justify-content: flex-start;
+    /* how to line up on cross axis */
+    align-content: center;
+    /* flex-wrap: wrap; */
 }

@@ -40,3 +40,18 @@ will not shrink or grow depending on the size of the browser screen. */
     align-content: center;
     /* flex-wrap: wrap; */
 }
+
+/* checks screen size of the device viewing the site from
+different screen sizes can have different viewspoints to better optimize the experience */
+/* like an if statement but for css */
+/* after each size threshold the site can have slightly different layout/visuals */
+@media screen and (min-width: 500px){
+    body{
+        background: blue;
+    }
+}
+@media screen and (min-width: 750px){
+    body{
+        background: yellow;
+    }
+}

@@ -18,8 +18,19 @@ html, body {
     padding: 5px;
     background: whitesmoke;
 }
+/* using :hover psuedo-class */
+.picture-frame:hover {
+    outline: 5px solid red;
+}
+/* scales image to be 10% larger than normal when hovers over with cursor*/
+/* applies to just the picture/ not anything the picture is inside of. */
+.picture-frame:hover img{
+    transform: scale(1.20);
+    opacity: 1.0;
+}
 .picture-frame img{
     width: 100%;
+    opacity: .9;
 
 }
 /* if absolute position is wanted, should really not do this, use # in html to assign an ID to each picture.

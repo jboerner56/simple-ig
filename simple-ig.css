@@ -19,20 +19,33 @@ html, body {
     background: whitesmoke;
 }
 /* using :hover psuedo-class */
-.picture-frame:hover {
+/* .picture-frame:hover {
     outline: 5px solid red;
-}
+} */
 /* scales image to be 10% larger than normal when hovers over with cursor*/
 /* applies to just the picture/ not anything the picture is inside of. */
-.picture-frame:hover img{
-    transform: scale(1.20);
+ .picture-frame:hover img{
+    transform: scale(1.1);
     /* transparency of the class object it is pertaining to */
     opacity: 1.0;
-}
+}  
 .picture-frame img{
     width: 100%;
     opacity: .9;
-
+    /* makes image grow from starting size to the sie it becomes after 
+    clicking on it */
+    transition: all 1s ease-in-out;
+    /* can take 3 different 
+        1. property names and the word "all" 
+        2. duration in seconds or ms
+        3. timing function*/
+}
+/* need to have the .picture-frame img so it will not compete with
+two above classes since they have scale effects also */
+/* add big to the picture frame class bc that is where the 'data-target' 
+is located */
+.picture-frame img.big {
+    transform: scale(1.5);
 }
 /* if absolute position is wanted, should really not do this, use # in html to assign an ID to each picture.
 set where the image is wanted using pixels to position on the screen.

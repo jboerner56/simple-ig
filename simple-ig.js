@@ -7,4 +7,11 @@ function respondToClick(){
     console.log("I am Doggo")
     console.log("Give me food")
 }
-targetElements[0].addEventListener("click", respondToClick);
+
+function attachClickHandler(oneElement){
+    // this is how one element is handled
+    oneElement.addEventListener("click", respondToClick);
+}
+
+
+targetElements.forEach(attachClickHandler);
